@@ -55,8 +55,6 @@
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container">
 					<a class="navbar-brand" href="https://www.puntoticket.com/play/"><img src="https://static.puntoticket.com/especiales/play/images/playlogo.svg" class="w-100" alt="puntoticket.com/play"></a>
-					<div class="navbar-nav-container d-none d-lg-block ml-lg-auto">
-					</div>
 				</div>
 			</nav>
 		</header>
@@ -67,30 +65,32 @@
                     <div class="col-12 col-sm-12 d-block d-md-none text-center">
                         <img src="img/logo-min.png " alt="tengo miedo torero logo" class="img-responsive">
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 text-left">
-                        <h2 class="ito cabeza">ESTÁS VIENDO</h2>
-                        <span class="horas">EL PRE SHOW</span>
+                    <div class="d-none d-md-block col-md-4 col-lg-4 txt-izq">
+                        <h2 class="ito cabeza viendo">ESTÁS VIENDO</h2>
+                        <span class="horas big">EL PRE SHOW</span>
                     </div>
                     <div class="d-none d-md-block col-md-4 col-lg-4 text-center">
                         <img src="img/logo-min.png " alt="tengo miedo torero logo desktop" class="img-responsive">
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 text-right">
-                        <h2 class="ito cabeza-der">PELÍCULA</h2>
-                        <span class="horas">22:00 HRS</span>  
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-4 offset-md-8 offset-lg-8 col-lg-4 text-right">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 txt-der">
+                        <h2 class="ito cabeza-der peli">PELÍCULA</h2>
+                        <span class="horas hora-peli">22:00 HRS</span>  
                         <div id="msn-soon" class="contador-general-peque start-in">
-                            <table height="100">
+                            <table height="95">
                                 <tr id="contador">
                                     <td width="25%" style="display: none;" class="b-r-w"><p id="start-day"></p></td>
-                                    <td width="25%" class="b-r-w"><p id="start-hour"></p></td>
-                                    <td width="5%"><p class="ponto-peque">:</p></td>
-                                    <td width="25%" class="b-r-w"><p id="start-min"></p></td>
-                                    <td width="5%"><p class="ponto-peque">:</p></td>
-                                    <td width="25%" class="b-r-w"><p id="start-sec"></p></td>
+                                    <td width="25%" class="b-r-w" valign="middle"><p id="start-hour" class="ponto-txt-small"></p></td>
+                                    <td width="5%" valign="middle"><p class="ponto-peque">:</p></td>
+                                    <td width="25%" class="b-r-w" valign="middle"><p id="start-min" class="ponto-txt-small"></p></td>
+                                    <td width="5%" valign="middle"><p class="ponto-peque">:</p></td>
+                                    <td width="25%" class="b-r-w" valign="middle"><p id="start-sec" class="ponto-txt-small"></p></td>
                                 </tr>
                             </table>
                         </div>  
+                    </div>
+                    <div class="col-12 col-sm-12 d-md-none txt-izq">
+                        <h2 class="ito cabeza viendo">ESTÁS VIENDO</h2>
+                        <span class="horas big">EL PRE SHOW</span>
                     </div>                    
                 </div>
             </div>
@@ -111,9 +111,9 @@
 
 <script>
 
-    var countDownDate = new Date('11/09/2020 1:00:00 PM UTC-4');
+var countDownDate = new Date('12/09/2020 09:00:00 PM UTC-4');
 
-var x = setInterval(function() {
+    var x = setInterval(function() {
 
     var now = new Date().getTime();
 

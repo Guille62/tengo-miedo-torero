@@ -22,6 +22,7 @@ $breakpoint-lg: 1290px;
     background-position: top center;
     background-attachment: fixed;
     font-size: 16px;
+    line-height: normal;
     letter-spacing: 2px;
 }
 
@@ -33,9 +34,10 @@ h2.cabeza{
     font-size: 2rem;
     font-family: var(--america);
     color: var(--rillo);
-    margin-bottom: 0px;
+    margin-bottom: 2px;
     padding-bottom: 0px;
     margin-top:0.5rem;
+    letter-spacing: 4px;
     @media (min-width: $breakpoint-sm) {
         font-size: 3rem;
     }
@@ -48,9 +50,10 @@ h2.cabeza-der{
     font-size: 2rem;
     font-family: var(--america);
     color: var(--rillo);
-    margin-bottom: 0px;
+    margin-bottom: 2px;
     padding-bottom: 0px;
     margin-top:0.5rem;
+    letter-spacing: 4px;
     @media (min-width: $breakpoint-sm) {
         font-size: 3rem;
     }
@@ -70,23 +73,137 @@ h2.cabeza-der{
     font-size: 1.5rem;
     color: #FFF;
     font-family: var(--america);
-    margin-top:-1rem;
     display: block;
+    margin-top: -0.5rem;
+    letter-spacing: 3px;
     @media (min-width: $breakpoint-sm) {
         font-size: 2rem;
     }
     @media (min-width: $breakpoint-md) {
         font-size: 2.8rem;
-        margin-top:-1.7rem;
+        margin-top: -1.2rem;
+    }
+}
+.viendo{
+    @media (min-width: $breakpoint-sm) {
+        font-size: 2rem !important;
+    }
+    @media (min-width: $breakpoint-sm) {
+        font-size: 3.4rem !important;
+        margin-top:5vh!important;
+    }
+    @media (min-width: $breakpoint-lg) {
+        margin-top:6vh !important;
+        font-size: 3.7rem !important;
+    }
+}
+.big{
+    font-size: 4.1rem !important;
+    @media (min-width: $breakpoint-sm) {
+        font-size: 2.5rem !important;
+    }
+    @media (min-width: $breakpoint-md) {
+        font-size: 4.1rem !important;
+    }
+}
+.txt-izq{
+    text-align: center;
+       @media (min-width: $breakpoint-sm) {
+         text-align: left;
+        }
+}
+.txt-der{
+    text-align: center;
+       @media (min-width: $breakpoint-sm) {
+            text-align: right;
+        }
+}
+.estas-viendo-line{
+    text-align: center;
+    @media (min-width: $breakpoint-md) {
+        text-align: right;
+        margin-top: -5vh !important;
+    }
+}
+.subtitulos-md{
+    @media (min-width: $breakpoint-md) {
+        text-align: left;
+        margin-top: -5vh !important;
+    }
+}
+.txt-tit{
+    font-size: 2rem !important;
+    margin-bottom:0.5rem !important;
+    @media (min-width: $breakpoint-sm) {
+        font-size: 1.9rem !important;
+    }
+    @media (min-width: $breakpoint-md) {
+        font-size: 3rem !important;
+    }
+}
+.txt-sub{
+    font-size:2.5rem !important;
+    @media (min-width: $breakpoint-sm) {
+        font-size:2rem !important;
+    }
+    @media (min-width: $breakpoint-md) {
+        font-size:3rem !important;
+    }
+}
+.txt-index-l, .txt-index-r{
+    text-align: center;
+}
+.txt-index-l{
+    @media (min-width: $breakpoint-md) {
+        text-align: left;
+    }
+}
+.txt-index-r{
+    @media (min-width: $breakpoint-md) {
+        text-align: right;
     }
 }
 
+.peli{
+    font-size: 4rem !important;
+    @media (min-width: $breakpoint-sm) {
+        font-size: 2.8rem !important;
+    }
+    @media (min-width: $breakpoint-md) {
+        font-size: 3.8rem !important;
+    }
+    @media (min-width: $breakpoint-lg) {
+        font-size: 3.8rem !important;
+    }
+}
+.hora-peli{
+    font-size: 4rem !important;
+    @media (min-width: $breakpoint-sm) {
+        font-size: 2rem !important;
+    }
+    @media (min-width: $breakpoint-md) {
+        font-size: 2.3rem !important;
+    }
+    @media (min-width: $breakpoint-lg) {
+        font-size: 2.3rem !important;
+    }
+}
+.ponto-txt{
+    padding-top: 2rem;    
+}
+.ponto-txt-small{
+    padding-top: 1rem;    
+}
+.contador-general #contador{
+    line-height: normal;
+}
 .contador-general{
     background: var(--rillo);
     width: 100%;
     display: block;
+    height: auto;;
     margin: 3rem auto;
-    max-width: 650px;
+    max-width: 300px;
     .b-r-w{
         color: var(--preto);
         font-family: var(--america);
@@ -95,12 +212,19 @@ h2.cabeza-der{
             font-size:9.5rem;
         }
         @media (min-width: $breakpoint-lg) {
-            font-size:18.5rem;
-            letter-spacing: 3px;
+            font-size:14.5rem;
+            letter-spacing: 2px;}
+        @media (min-width: $breakpoint-md) {    
+            /*padding-top: 2rem !important;
+            padding-bottom:1rem !important;*/
         }
     }
+    @media (min-width: $breakpoint-sm) {
+        max-width: 450px;
+        margin: 6rem auto;
+    }
     @media (min-width: $breakpoint-lg) {
-        max-width: 1100px;
+        max-width: 700px;
         margin: 6rem auto;
     }
 }
@@ -109,6 +233,7 @@ h2.cabeza-der{
     display: block;
     margin: 3rem auto;
     max-width: 650px;
+    text-align: center;
     .b-r-w{
         color: var(--preto);
         font-family: var(--america);
@@ -126,17 +251,21 @@ h2.cabeza-der{
     }
 }
 .contador-general table{
-    width:100%;
+    width:100%;}
+.contador-general table td{    
+    @media (min-width: $breakpoint-md) {
+        max-height: 200px !important;
+    }
 }
 .ponto{
     color: var(--preto);
     font-family: var(--america);
-    font-size:2rem;
+    font-size:5.5rem;
     @media (min-width: $breakpoint-sm) {
-        font-size:7.5rem;
+        font-size:9.5rem;
     }
     @media (min-width: $breakpoint-lg) {
-        font-size:15.5rem;
+        font-size:14.5rem;
     }
 }
 .navbar-brand{
@@ -147,7 +276,7 @@ h2.cabeza-der{
     background: var(--rillo);
     width: 100%;
     display: block;
-    max-width: 240px;
+    max-width: 200px;
     margin:auto;
     .b-r-w{
         color: var(--preto);
@@ -155,6 +284,7 @@ h2.cabeza-der{
         font-size:4.5rem;
         @media (min-width: $breakpoint-sm) {
             font-size:4.5rem;
+            padding-top:2rem;
         }
         @media (min-width: $breakpoint-lg) {
             font-size:5.5rem;
@@ -164,15 +294,15 @@ h2.cabeza-der{
     }
     @media (min-width: $breakpoint-sm) {
         float: right; 
-        margin-top:-50px
+        margin-top:0px;
+        clear:both;
     }
     @media (min-width: $breakpoint-md) {
         float: right; 
-        margin-top:-80px
+        margin-top:0px;
     }
     @media (min-width: $breakpoint-lg) {
         max-width: 320px;
-        margin-top:-120px
     }
     table td{
         padding: 0px 0px !important;
@@ -190,7 +320,7 @@ h2.cabeza-der{
 .ponto-peque{
     color: var(--preto);
     font-family: var(--america);
-    font-size:1rem;
+    font-size:3rem;
     line-height: 0px;
     @media (min-width: $breakpoint-sm) {
         font-size:4.5rem;
@@ -217,7 +347,6 @@ h2.cabeza-der{
     display: block;
 }
 
-
 .contador-general-if iframe{
     overflow: hidden !important;
 }
@@ -227,11 +356,24 @@ h2.cabeza-der{
     background: var(--rillo);
     color: var(--preto);
     font-family: var(--america);
-    font-size: 2.7rem;
+    font-size: 2rem;
     width:100%;
     max-width: 240px;
     border: solid 1px transparent;
+    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     &:hover{
         opacity: 0.7;
+    }
+    @media (min-width: $breakpoint-lg) {
+        font-size: 2.7rem;
+        margin-bottom: 0rem;
+        margin-bottom: 0.3rem;
+    }
+}
+.typeform-widget{
+    height: 400px !important;
+    @media (min-width: $breakpoint-lg) {
+        height: 350px !important;
     }
 }
