@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,21 +11,16 @@
 	<meta name="description" content="Conciertos, Teatro, Stand Up Comedy, Talleres y todo lo que te apasiona sin moverte de tu casa. Punto Play es nuestro servicio de eventos Live que ofrece presentaciones en vivo, retransmisiones, videos exlusivos a bajo costo." />
 	<link rel="icon" type="image/png" href="https://static.puntoticket.com/favicon.png" />
 	<link rel="SHORTCUT ICON" type="image/png" href="https://static.puntoticket.com/favicon.png" />
-
-	<link rel="stylesheet" type="text/css" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/jquery-ui.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPT+Sans:400,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-	
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-
 	<link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/bootstrap.css">
-	<link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/main.css">
-	<link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/fonts.css">
+	
+
 
 	<link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/contador-2.css">
+	<script src="https://kit.fontawesome.com/a7f9895e55.js"></script>
 
-    <link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/theo-libreria.css"/>
+
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -36,13 +29,17 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
 	<script src="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/js/jquery.main.js" defer></script>
 
+    <script src="./js/axios.js"></script>
+    <script src="./js/moment.js"></script>
+    <script src="./js/contador.js"></script>
 
+    <style>
+        .theoplayer-poster{
+            background-size: cover !important;
+        }
+    </style>
 
-
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=f6a9541a-d5b8-46e9-a65c-62e30a1e4fd6" type="text/javascript"> </script>  
-<script type="text/javascript">   if (zE) { zE(function() {    $zopim(function() {     $zopim.livechat.departments.setVisitorDepartment('Punto Ticket');     $zopim.livechat.departments.filter('');    });   });   window.zESettings = {    webWidget: {     color: {      theme: '#988D1F'     }    }   }; };  </script> 
 </head>
-
 
 
 
@@ -96,7 +93,7 @@
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="contador-general-if">
-                        <img src="img/capa-pre-show-min.jpg" class="img-responsive">
+                    <div class="theoplayer-container video-js theoplayer-skin"></div>
                 </div>
             </div>
         </div>
@@ -109,35 +106,94 @@
     </div>
 
 
+    <script src="./js/axios.js"></script>
+    <script src="./js/moment.js"></script>
+    <script src="./js/contador.js"></script>
+    
+<script src="js/the-libreria.js"></script>
 <script>
+        var element = document.querySelector(".theoplayer-container");
+        // your THEOplayer library 
+        var player = new THEOplayer.Player(element, {
+            libraryLocation:
+                "https://cdn.myth.theoplayer.com/1187b05d-1dde-433f-b6e3-3b9eaee7cb98",
+            ui: {
+                width: "980px",
+                height: "auto",
+            }
+        });
+        
+        player.source = {
+            // this stream already includes French and Chinese subtitles
+            sources: {
+                type : 'application/x-mpegurl',
+                src: 'https://cdn.theoplayer.com/video/big_buck_bunny/big_buck_bunny.m3u8'
+            }
+            ,
+            poster: 'img/capa-pre-show-min.jpg',
+        };
 
-var countDownDate = new Date('12/09/2020 09:00:00 PM UTC-4');
-
-    var x = setInterval(function() {
-
-    var now = new Date().getTime();
-
-    var distance = countDownDate - now;
-
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById('msn-soon').innerHTML = 'queda poco tiempo!';
-        return;
-    }
-
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("start-day").innerHTML = days;
-    document.getElementById("start-hour").innerHTML = hours;
-    document.getElementById("start-min").innerHTML = minutes;
-    document.getElementById("start-sec").innerHTML = seconds;
-
-}, 1000);
+        // setting up the rewind button by setting up a video-js component
+        var Button = THEOplayer.videojs.getComponent('Button');
+        var RewindButton = THEOplayer.videojs.extend(Button, {
+            constructor: function() {
+                Button.apply(this, arguments);
+                /* initialize your button */
+                // this.el() = created DOM-element
+        
+                // add tooltip
+                var tooltipSpan = document.createElement('span');
+                tooltipSpan.className = 'theo-button-tooltip vjs-hidden';
+                tooltipSpan.innerText = 'Volver 10 segundos';
+                function toggleTooltip() {
+                    tooltipSpan.classList.toggle('vjs-hidden');
+                }
+                this.el().addEventListener('mouseover', toggleTooltip);
+                this.el().addEventListener('mouseout', toggleTooltip);
+   
+                this.el().appendChild(tooltipSpan);
+            },
+            handleClick: () => {
+                player.currentTime -= 10;
+            },
+            buildCSSClass: function () {
+                return 'fa fa-backward vjs-button'; // insert all class names here
+            }
+        });
+        THEOplayer.videojs.registerComponent('RewindButton', RewindButton);
+        player.ui.getChild('controlBar').addChild('RewindButton', {});
+        
+        // setting up the forward button by setting up a video-js component
+        var Button = THEOplayer.videojs.getComponent('Button');
+        var ForwardButton = THEOplayer.videojs.extend(Button, {
+            constructor: function() {
+                Button.apply(this, arguments);
+                /* initialize your button */
+                // this.el() = created DOM-element
+        
+                // add tooltip
+                var tooltipSpan = document.createElement('span');
+                tooltipSpan.className = 'theo-button-tooltip vjs-hidden';
+                tooltipSpan.innerText = 'Avanzar 10 segundos';
+                function toggleTooltip() {
+                    tooltipSpan.classList.toggle('vjs-hidden');
+                }
+                this.el().addEventListener('mouseover', toggleTooltip);
+                this.el().addEventListener('mouseout', toggleTooltip);
+                this.el().appendChild(tooltipSpan);
+            },
+            handleClick: () => {
+                player.currentTime += 10;
+            },
+            buildCSSClass: function () {
+                return 'fa fa-forward vjs-button'; // insert all class names here
+            }
+        });
+        THEOplayer.videojs.registerComponent('ForwardButton', ForwardButton);
+        player.ui.getChild('controlBar').addChild('ForwardButton', {});
 
 </script>
+
 
 
 </body>

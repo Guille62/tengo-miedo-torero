@@ -18,11 +18,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPT+Sans:400,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-	
+    <link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/main.css">
+    <script src="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/js/jquery.main.js" defer></script>    
+
+
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 	<link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/bootstrap.css">
-	<link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/main.css">
+	<!--<link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/main.css">-->
 	<link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/fonts.css">
 
 	<link rel="stylesheet" href="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/css/contador-2.css">
@@ -30,16 +34,30 @@
     <link rel="stylesheet" href="css/estilo.css">
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 	<script>window.jQuery || document.write('<script src="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/js/jquery-3.3.1.min.js" defer><\/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous" defer></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
-	<script src="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/js/jquery.main.js" defer></script>
+	<!--<script src="https://static.puntoticket.com/especiales/emk053_tengomiedotorero/js/jquery.main.js" defer></script>-->
+
+
+
+	<meta property="fb:app_id" content="185751294773934" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Avant Premiere “Tengo Miedo, Torero” - 12 y 13 de Septiembre" />
+	<meta property="og:url" content="https://www.puntoticket.com/tengo-miedo-torero" />
+	<meta property="og:description" content="La película más esperada del 2020 hará su estreno exclusivo para Chile sólo por Punto Play" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@puntoticket" />
+	<meta name="twitter:creator" content="@puntoticket" />
+	<meta name="twitter:domain" content="www.puntoticket.com" />
+	<meta name="twitter:title" content="Avant Premiere “Tengo Miedo, Torero” - 12 y 13 de Septiembre" />
+	<meta name="twitter:description" content="La película más esperada del 2020 hará su estreno exclusivo para Chile sólo por Punto Play" />
 
 
 
 
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=f6a9541a-d5b8-46e9-a65c-62e30a1e4fd6" type="text/javascript"> </script>  <script type="text/javascript">   if (zE) { zE(function() {    $zopim(function() {     $zopim.livechat.departments.setVisitorDepartment('Punto Ticket');     $zopim.livechat.departments.filter('');    });   });   window.zESettings = {    webWidget: {     color: {      theme: '#988D1F'     }    }   }; }  </script> 
+
 </head>
 
 <body class="theme_dark landing_4">
@@ -94,6 +112,11 @@
             </div>
         </div>
 	</div>
+
+
+
+
+
     <div class="blanco">
         <div class="container">
             <div class="une">EL CINE NOS UNE</div>
@@ -102,35 +125,9 @@
     </div>
 
 
-<script>
-
-var countDownDate = new Date('12/09/2020 10:00:00 PM UTC-4');
-
-var x = setInterval(function() {
-
-    var now = new Date().getTime();
-
-    var distance = countDownDate - now;
-
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById('msn-soon').innerHTML = 'queda poco tiempo!';
-        return;
-    }
-
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("start-day").innerHTML = days;
-    document.getElementById("start-hour").innerHTML = hours;
-    document.getElementById("start-min").innerHTML = minutes;
-    document.getElementById("start-sec").innerHTML = seconds;
-
-}, 1000);
-
-</script>
+    <script src="./js/axios.js"></script>
+    <script src="./js/moment.js"></script>
+    <script src="./js/contador.js"></script>
 
 
 </body>

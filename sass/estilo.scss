@@ -24,6 +24,10 @@ $breakpoint-lg: 1290px;
     font-size: 16px;
     line-height: normal;
     letter-spacing: 2px;
+    height: auto;
+    @media (min-width: $breakpoint-md) {
+        padding-bottom: 5rem;
+    }
 }
 
 .img-responsive{
@@ -204,6 +208,8 @@ h2.cabeza-der{
     height: auto;;
     margin: 3rem auto;
     max-width: 300px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     .b-r-w{
         color: var(--preto);
         font-family: var(--america);
@@ -220,11 +226,11 @@ h2.cabeza-der{
         }
     }
     @media (min-width: $breakpoint-sm) {
-        max-width: 450px;
+        max-width: 470px;
         margin: 6rem auto;
     }
     @media (min-width: $breakpoint-lg) {
-        max-width: 700px;
+        max-width: 730px;
         margin: 6rem auto;
     }
 }
@@ -247,7 +253,7 @@ h2.cabeza-der{
         }
     }
     @media (min-width: $breakpoint-lg) {
-        max-width: 1100px;
+        max-width: 950px;
     }
 }
 .contador-general table{
@@ -271,19 +277,42 @@ h2.cabeza-der{
 .navbar-brand{
     margin:auto
 }
-
+.problemas{
+    background-color: rgba($color: #ffff00, $alpha: 0.7);
+    color:#000;
+    max-width: 560px;
+    border-radius: 18px;
+    height: 60px;
+    font-size: 0.8rem;
+    margin: auto;
+    padding-top: 0.8rem;
+    margin-bottom: 2rem;
+    a{
+        color: #000;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    @media (min-width: $breakpoint-md) {
+        padding-top: 1.2rem;
+    }
+}
+.close{
+    margin-top: 5px;
+}
 .contador-general-peque {
     background: var(--rillo);
     width: 100%;
     display: block;
-    max-width: 200px;
+    max-width: 270px;
     margin:auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
     .b-r-w{
         color: var(--preto);
         font-family: var(--america);
         font-size:4.5rem;
         @media (min-width: $breakpoint-sm) {
-            font-size:4.5rem;
+            font-size:3.5rem;
             padding-top:2rem;
         }
         @media (min-width: $breakpoint-lg) {
@@ -302,7 +331,7 @@ h2.cabeza-der{
         margin-top:0px;
     }
     @media (min-width: $breakpoint-lg) {
-        max-width: 320px;
+        max-width: 380px;
     }
     table td{
         padding: 0px 0px !important;
@@ -376,4 +405,18 @@ h2.cabeza-der{
     @media (min-width: $breakpoint-lg) {
         height: 350px !important;
     }
+}
+
+
+.fa-backward {
+    order: -101; /* to the left of the play/pause-button */
+    cursor: pointer;
+}
+.fa-forward {
+    order: -100; /* to the right of the play/pause-button */
+    cursor: pointer;
+}
+
+.theoplayer-container{
+    width:100%
 }
